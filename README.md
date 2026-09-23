@@ -13,7 +13,7 @@
   - [Integrante 3] — [Temática asignada]
   - [Integrante 4] — [Temática asignada]
 
-## 🎯 Descripción del Proyecto
+## Descripción del Proyecto
 
 Sitio web que propone un recorrido temático por distintas expresiones culturales y pasiones de Buenos Aires. Cada integrante se encarga de una temática diferente (fútbol, tango, arte urbano, gastronomía, etc.) como parte de una propuesta unificada.
 
