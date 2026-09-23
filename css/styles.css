@@ -1,18 +1,19 @@
 /* =============================================
-   DESIGN SYSTEM — Recorrido Estadios de Fútbol
+   DESIGN SYSTEM — Recorridos Temáticos (Grupo N5)
    =============================================
 
-   PALETA DE COLORES (placeholder — ajustar según identidad visual)
+   PALETA DE COLORES
    ------------------------------------------------------------------
-   --color-primary:    #1B5E20;    Verde oscuro (césped)
-   --color-secondary:  #2E7D32;    Verde medio
+   --color-primary:    #1A1A2E;    Azul oscuro profundo
+   --color-secondary:  #E63946;    Rojo vivo (acento)
    --color-accent:     #FFC107;    Amarillo/dorado
-   --color-dark:       #1A1A2E;    Fondo oscuro
    --color-light:      #F5F5F5;    Fondo claro
+   --color-white:      #FFFFFF;    Blanco
    --color-text:       #212121;    Texto principal
    --color-text-light: #FAFAFA;    Texto sobre fondo oscuro
+   --color-muted:      #666666;    Texto secundario
 
-   TIPOGRAFÍAS (placeholder — importar desde Google Fonts)
+   TIPOGRAFÍAS
    ------------------------------------------------------------------
    Títulos:  'Montserrat', sans-serif
    Cuerpo:   'Open Sans', sans-serif
@@ -22,10 +23,9 @@
    Mobile:   < 768px   (base)
    Tablet:   >= 768px
    Desktop:  >= 1024px
-   Wide:     >= 1440px
    ============================================= */
 
-/* ── Reset y base ── */
+/* ── Reset ── */
 *,
 *::before,
 *::after {
@@ -35,23 +35,19 @@
 }
 
 :root {
-  --color-primary: #1B5E20;
-  --color-secondary: #2E7D32;
+  --color-primary: #1A1A2E;
+  --color-secondary: #E63946;
   --color-accent: #FFC107;
-  --color-dark: #1A1A2E;
   --color-light: #F5F5F5;
+  --color-white: #FFFFFF;
   --color-text: #212121;
   --color-text-light: #FAFAFA;
+  --color-muted: #666666;
 
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Open Sans', sans-serif;
 
-  --max-width: 1200px;
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 3rem;
-  --spacing-xl: 4rem;
+  --max-width: 1100px;
 }
 
 html {
@@ -70,26 +66,20 @@ body {
 }
 
 /* ── Tipografía ── */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   font-family: var(--font-heading);
   line-height: 1.2;
   font-weight: 700;
 }
 
-h1 { font-size: 2rem; }
-h2 { font-size: 1.75rem; }
-h3 { font-size: 1.5rem; }
-
 a {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   text-decoration: none;
 }
 
 a:hover,
 a:focus-visible {
   text-decoration: underline;
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
 }
 
 img {
@@ -102,31 +92,157 @@ ul {
   list-style: none;
 }
 
-/* ── Utilidades / Layout ── */
+/* ── Layout ── */
 .container {
   width: 90%;
   max-width: var(--max-width);
   margin-inline: auto;
-  padding-inline: var(--spacing-sm);
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* ── Header / Navbar ── */
-.header {
-  background-color: var(--color-dark);
+/* ── Hero ── */
+.hero {
+  background-color: var(--color-primary);
   color: var(--color-text-light);
-  padding: var(--spacing-sm) 0;
+  text-align: center;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero__logo {
+  border-radius: 50%;
+}
+
+.hero__grupo {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.hero__title {
+  font-size: 2.2rem;
+  font-weight: 900;
+}
+
+.hero__subtitle {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  max-width: 500px;
+}
+
+/* ── Sección genérica ── */
+.section__title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+/* ── Cards de temáticas ── */
+.tematicas {
+  padding: 3rem 0;
+}
+
+.cards-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 280px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card__icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.card__title {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.card__text {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* ── Integrantes ── */
+.integrantes {
+  padding: 3rem 0;
+  background-color: var(--color-white);
+}
+
+.integrantes-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.integrante {
+  text-align: center;
+}
+
+.integrante__foto {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin: 0 auto 0.75rem auto;
+  overflow: hidden;
+  border: 3px solid var(--color-accent);
+}
+
+.integrante__foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.integrante__nombre {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+/* ── Footer ── */
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: auto;
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+/* ── Header / Navbar (para páginas internas) ── */
+.header {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -141,7 +257,7 @@ ul {
 .header__logo {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xs);
+  gap: 0.5rem;
 }
 
 .header__logo img {
@@ -151,135 +267,49 @@ ul {
 
 .header__logo span {
   font-family: var(--font-heading);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--color-text-light);
 }
 
 .nav__list {
   display: flex;
-  gap: var(--spacing-sm);
+  gap: 1rem;
 }
 
 .nav__link {
   color: var(--color-text-light);
   font-weight: 600;
-  padding: var(--spacing-xs);
+  padding: 0.25rem;
   transition: color 0.2s;
 }
 
 .nav__link:hover,
 .nav__link:focus-visible {
   color: var(--color-accent);
+  text-decoration: none;
 }
 
-/* ── Hero / Landing ── */
-.hero {
-  background-color: var(--color-dark);
-  color: var(--color-text-light);
-  text-align: center;
-  padding: var(--spacing-xl) var(--spacing-sm);
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-md);
-}
-
-.hero__logo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+/* ── POI (Point of Interest) pages ── */
+.poi-hero {
   background-color: var(--color-secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-inline: auto;
-}
-
-.hero__title {
-  font-size: 2.5rem;
-  color: var(--color-accent);
-}
-
-.hero__subtitle {
-  font-size: 1.25rem;
-  opacity: 0.9;
-}
-
-.hero__badge {
-  display: inline-block;
-  background-color: var(--color-accent);
-  color: var(--color-dark);
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border-radius: 4px;
-  font-weight: 700;
-  font-family: var(--font-heading);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* ── Sección de integrantes ── */
-.team {
-  padding: var(--spacing-lg) 0;
-  text-align: center;
-}
-
-.team__title {
-  margin-bottom: var(--spacing-md);
-}
-
-.team__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-md);
-  padding: 0;
-}
-
-.team__member {
-  background: white;
-  border-radius: 8px;
-  padding: var(--spacing-md);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.team__member h3 {
-  font-size: 1.1rem;
-  margin-bottom: var(--spacing-xs);
-}
-
-.team__member p {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* ── Footer ── */
-.footer {
-  background-color: var(--color-dark);
   color: var(--color-text-light);
+  padding: 3rem 0;
   text-align: center;
-  padding: var(--spacing-md) 0;
-  margin-top: auto;
 }
 
-.footer p {
-  font-size: 0.875rem;
-  opacity: 0.8;
+.poi-content {
+  padding: 3rem 0;
 }
 
-/* ── Cards de puntos de interés ── */
-.card {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+.poi-content section {
+  margin-bottom: 2.5rem;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+.poi-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
 .card__image {
@@ -290,51 +320,34 @@ ul {
 }
 
 .card__body {
-  padding: var(--spacing-md);
+  padding: 1.5rem;
 }
 
-.card__title {
-  font-size: 1.25rem;
-  margin-bottom: var(--spacing-xs);
-}
+/* =====================
+   RESPONSIVE
+   ===================== */
 
-.card__text {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* ── Página de punto de interés ── */
-.poi-hero {
-  /* POI = Point of Interest */
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
-  padding: var(--spacing-xl) 0;
-  text-align: center;
-}
-
-.poi-content {
-  padding: var(--spacing-lg) 0;
-}
-
-.poi-content section {
-  margin-bottom: var(--spacing-lg);
-}
-
-.poi-info-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--spacing-md);
-}
-
-/* ── Responsive (Mobile First) ── */
-
-/* Tablet */
+/* Tablet (>= 768px) */
 @media (min-width: 768px) {
-  h1 { font-size: 2.5rem; }
-  h2 { font-size: 2rem; }
 
   .hero__title {
-    font-size: 3rem;
+    font-size: 2.8rem;
+  }
+
+  .cards-row {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 0 1 220px;
+  }
+
+  .integrantes-row {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .poi-info-grid {
@@ -342,11 +355,14 @@ ul {
   }
 }
 
-/* Desktop */
+/* Desktop (>= 1024px) */
 @media (min-width: 1024px) {
-  h1 { font-size: 3rem; }
 
   .hero__title {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
+  }
+
+  .card {
+    flex: 0 1 240px;
   }
 }

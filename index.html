@@ -3,43 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Próximamente — Recorrido por Estadios de Fútbol</title>
+  <title>Grupo N5 — Recorridos Temáticos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <main class="hero">
+  <!-- ============================
+       HERO — Presentación del grupo
+       ============================ -->
+  <header class="hero">
+    <img src="assets/images/logo.svg" alt="Logo Recorridos Temáticos — Grupo N5" class="hero__logo" width="120" height="120">
+    <p class="hero__grupo">Grupo N5</p>
+    <h1 class="hero__title">Recorridos Temáticos</h1>
+    <p class="hero__subtitle">Próximamente — Descubrí Buenos Aires a través de sus pasiones</p>
+  </header>
 
-    <!-- Logo del proyecto -->
-    <div class="hero__logo" aria-hidden="true">
-      <img src="assets/images/logo.svg" alt="Logo del proyecto — Recorrido por Estadios de Fútbol" width="100" height="100">
-    </div>
+  <main>
 
-    <!-- Nº de grupo -->
-    <p class="hero__grupo">Grupo Nº [COMPLETAR]</p>
+    <!-- ============================
+         SECCIÓN — Temáticas (cards)
+         ============================ -->
+    <section class="tematicas" aria-label="Temáticas del recorrido">
+      <div class="container">
+        <h2 class="section__title">Nuestros Recorridos</h2>
+        <div class="cards-row">
 
-    <!-- Próximamente + nombre del sitio -->
-    <h1 class="hero__title">Próximamente</h1>
-    <p class="hero__subtitle">"Nombre del Recorrido por Estadios de Fútbol"</p>
+          <article class="card">
+            <div class="card__icon"><img src="assets/icons/futbol.svg" alt="" width="48" height="48" style="margin: 0 auto;"></div>
+            <h3 class="card__title"><a href="pages/futbol.html">Fútbol</a></h3>
+            <p class="card__text">Estadios, historia y pasión futbolera.</p>
+          </article>
 
-    <!-- Integrantes del grupo -->
-    <section class="team" aria-label="Integrantes del grupo">
-      <h2 class="team__title">Integrantes</h2>
-      <ul class="team__list">
-        <li class="team__member">[Nombre Integrante 1]</li>
-        <li class="team__member">[Nombre Integrante 2]</li>
-        <li class="team__member">[Nombre Integrante 3]</li>
-        <li class="team__member">[Nombre Integrante 4]</li>
-      </ul>
+          <article class="card">
+            <div class="card__icon"><img src="assets/icons/tematica-placeholder.svg" alt="" width="48" height="48" style="margin: 0 auto;"></div>
+            <h3 class="card__title">[Temática 2]</h3>
+            <p class="card__text">[Descripción de la temática].</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon"><img src="assets/icons/tematica-placeholder.svg" alt="" width="48" height="48" style="margin: 0 auto;"></div>
+            <h3 class="card__title">[Temática 3]</h3>
+            <p class="card__text">[Descripción de la temática].</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon"><img src="assets/icons/tematica-placeholder.svg" alt="" width="48" height="48" style="margin: 0 auto;"></div>
+            <h3 class="card__title">[Temática 4]</h3>
+            <p class="card__text">[Descripción de la temática].</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================
+         SECCIÓN — Integrantes
+         ============================ -->
+    <section class="integrantes" aria-label="Integrantes del grupo">
+      <div class="container">
+        <h2 class="section__title">Integrantes</h2>
+        <div class="integrantes-row">
+
+          <div class="integrante">
+            <div class="integrante__foto">
+              <!-- Reemplazar con <img src="assets/images/foto-1.jpg" alt="Foto de [Nombre]"> -->
+            </div>
+            <p class="integrante__nombre">[Nombre Apellido]</p>
+          </div>
+
+          <div class="integrante">
+            <div class="integrante__foto"></div>
+            <p class="integrante__nombre">[Nombre Apellido]</p>
+          </div>
+
+          <div class="integrante">
+            <div class="integrante__foto"></div>
+            <p class="integrante__nombre">[Nombre Apellido]</p>
+          </div>
+
+          <div class="integrante">
+            <div class="integrante__foto"></div>
+            <p class="integrante__nombre">[Nombre Apellido]</p>
+          </div>
+
+        </div>
+      </div>
     </section>
 
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    <p>Diseño y Desarrollo Web — Actividad 2</p>
+    <p>Grupo N5 — Diseño y Desarrollo Web — Actividad 2</p>
   </footer>
 
 </body>
