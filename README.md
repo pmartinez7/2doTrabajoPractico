@@ -40,5 +40,5 @@ Sitio web que propone un recorrido temático por los estadios de fútbol más em
 ## Enlaces
 
 - **Repositorio GitHub:** https://github.com/pmartinez7/2doTrabajoPractico
-- **Sitio desplegado:** 
+- **Sitio desplegado:** https://pmartinez7.github.io/2doTrabajoPractico/index.html
 - **Prototipo (Figma/Stitch):** [COMPLETAR]
