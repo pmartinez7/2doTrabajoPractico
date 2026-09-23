@@ -1,9 +1,9 @@
-# 🗺️ Recorridos Temáticos
+# Recorridos Temáticos
 
 > **Actividad 2 – Diseño de un Recorrido**  
 > Diseño y Desarrollo Web — 2do Trabajo Práctico
 
-## 📋 Información del Grupo
+## Información del Grupo
 
 - **Grupo Nº:** N5
 - **Categoría:** Recorridos temáticos
